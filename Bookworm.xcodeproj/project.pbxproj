@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36B29B4F28F5F861006C2F59 /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B29B4E28F5F861006C2F59 /* BookwormApp.swift */; };
-		36B29B5128F5F861006C2F59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B29B5028F5F861006C2F59 /* ContentView.swift */; };
+		36B29B5128F5F861006C2F59 /* BookWormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B29B5028F5F861006C2F59 /* BookWormView.swift */; };
 		36B29B5328F5F869006C2F59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36B29B5228F5F869006C2F59 /* Assets.xcassets */; };
 		36B29B5628F5F869006C2F59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36B29B5528F5F869006C2F59 /* Preview Assets.xcassets */; };
 		36B29B5E28F5FDE9006C2F59 /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36B29B5C28F5FDE9006C2F59 /* Bookworm.xcdatamodeld */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		36B29B4B28F5F861006C2F59 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B29B4E28F5F861006C2F59 /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
-		36B29B5028F5F861006C2F59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		36B29B5028F5F861006C2F59 /* BookWormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookWormView.swift; sourceTree = "<group>"; };
 		36B29B5228F5F869006C2F59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36B29B5528F5F869006C2F59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		36B29B5D28F5FDE9006C2F59 /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
@@ -64,15 +64,11 @@
 			isa = PBXGroup;
 			children = (
 				36B29B4E28F5F861006C2F59 /* BookwormApp.swift */,
-				36B29B5028F5F861006C2F59 /* ContentView.swift */,
+				36B29B5028F5F861006C2F59 /* BookWormView.swift */,
 				36B29B5228F5F869006C2F59 /* Assets.xcassets */,
 				36B29B5428F5F869006C2F59 /* Preview Content */,
-				36B29B5C28F5FDE9006C2F59 /* Bookworm.xcdatamodeld */,
-				36B29B5F28F5FE41006C2F59 /* DataController.swift */,
-				36B29B6128F76053006C2F59 /* AddBookView.swift */,
-				36E71B2E28F9FA2D00ABDB15 /* RatingView.swift */,
-				36E71B3028F9FEF000ABDB15 /* EmojiRatingView.swift */,
-				36E71B3228FB4EEF00ABDB15 /* DetailView.swift */,
+				36E71B3528FB65E400ABDB15 /* CoreData */,
+				36E71B3428FB65D200ABDB15 /* Subview's */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -83,6 +79,26 @@
 				36B29B5528F5F869006C2F59 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36E71B3428FB65D200ABDB15 /* Subview's */ = {
+			isa = PBXGroup;
+			children = (
+				36B29B6128F76053006C2F59 /* AddBookView.swift */,
+				36E71B2E28F9FA2D00ABDB15 /* RatingView.swift */,
+				36E71B3028F9FEF000ABDB15 /* EmojiRatingView.swift */,
+				36E71B3228FB4EEF00ABDB15 /* DetailView.swift */,
+			);
+			path = "Subview's";
+			sourceTree = "<group>";
+		};
+		36E71B3528FB65E400ABDB15 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				36B29B5C28F5FDE9006C2F59 /* Bookworm.xcdatamodeld */,
+				36B29B5F28F5FE41006C2F59 /* DataController.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36B29B5128F5F861006C2F59 /* ContentView.swift in Sources */,
+				36B29B5128F5F861006C2F59 /* BookWormView.swift in Sources */,
 				36E71B3328FB4EEF00ABDB15 /* DetailView.swift in Sources */,
 				36B29B6028F5FE41006C2F59 /* DataController.swift in Sources */,
 				36E71B3128F9FEF000ABDB15 /* EmojiRatingView.swift in Sources */,

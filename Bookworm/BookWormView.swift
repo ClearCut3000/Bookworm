@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  BookWormView.swift
 //  Bookworm
 //
 //  Created by Николай Никитин on 11.10.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct BookWormView: View {
 
   //MARK: - View Properties
   @Environment(\.managedObjectContext) var moc
@@ -71,6 +71,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    BookWormView()
   }
 }
