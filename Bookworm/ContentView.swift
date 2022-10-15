@@ -16,45 +16,45 @@ struct ContentView: View {
   @State private var showingAddScreen = false
 
   //MARK: - View Body
-    var body: some View {
-      NavigationView {
-        List {
-          ForEach(books) { book in
-            NavigationLink {
-              Text(book.title ?? "Unknown title")
-            } label: {
-              HStack {
-                EmojiRatingView(rating: book.rating)
-                  .font(.largeTitle)
-                VStack(alignment: .leading) {
-                  Text(book.title ?? "Unknown title")
-                    .font(.headline)
-                  Text(book.author ?? "Unknown author")
-                    .foregroundColor(.secondary)
-                }
+  var body: some View {
+    NavigationView {
+      List {
+        ForEach(books) { book in
+          NavigationLink {
+            DetailView(book: book)
+          } label: {
+            HStack {
+              EmojiRatingView(rating: book.rating)
+                .font(.largeTitle)
+              VStack(alignment: .leading) {
+                Text(book.title ?? "Unknown title")
+                  .font(.headline)
+                Text(book.author ?? "Unknown author")
+                  .foregroundColor(.secondary)
               }
             }
           }
         }
-          .navigationTitle("BookWorm")
-          .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-              Button {
-                showingAddScreen.toggle()
-              } label: {
-                Label("Add Book", systemImage: "plus")
-              }
-            }
+      }
+      .navigationTitle("BookWorm")
+      .toolbar {
+        ToolbarItem(placement: .navigationBarTrailing) {
+          Button {
+            showingAddScreen.toggle()
+          } label: {
+            Label("Add Book", systemImage: "plus")
           }
-          .sheet(isPresented: $showingAddScreen) {
-            AddBookView()
-          }
+        }
+      }
+      .sheet(isPresented: $showingAddScreen) {
+        AddBookView()
       }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
