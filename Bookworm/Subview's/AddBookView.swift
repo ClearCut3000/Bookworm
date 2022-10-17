@@ -49,14 +49,23 @@ struct AddBookView: View {
               newBook.genre = genre
               newBook.review = review
               newBook.rating = Int16(rating)
+              newBook.date = Date.now
               try? moc.save()
               dismiss()
             }
+            .disabled(isInvalidForm())
           }
         }
         .navigationTitle("Add Book")
       }
     }
+
+  func isInvalidForm() -> Bool {
+    if title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || author.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || genre.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+      return true
+    }
+    return false
+  }
 }
 
 struct AddBookView_Previews: PreviewProvider {

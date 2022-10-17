@@ -34,9 +34,12 @@ struct BookWormView: View {
                   .font(.headline)
                 Text(book.author ?? "Unknown author")
                   .foregroundColor(.secondary)
+                Text(book.date?.formatted(date: .abbreviated, time: .omitted) ?? "Date not available")
+                  .font(.caption)
               }
             }
           }
+          .listRowBackground(book.rating < 2 ? Color.red.opacity(0.25) : Color.secondary.opacity(0.1))
         }
         .onDelete(perform: deleteBooks)
       }
