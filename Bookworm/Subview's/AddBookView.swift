@@ -50,7 +50,9 @@ struct AddBookView: View {
               newBook.review = review
               newBook.rating = Int16(rating)
               newBook.date = Date.now
-              try? moc.save()
+              if moc.hasChanges {
+                try? moc.save()
+              }
               dismiss()
             }
             .disabled(isInvalidForm())

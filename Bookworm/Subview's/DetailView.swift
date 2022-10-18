@@ -59,7 +59,9 @@ struct DetailView: View {
   //MARK: - View Methods
   func deleteBook() {
     moc.delete(book)
-    try? moc.save()
+    if moc.hasChanges {
+      try? moc.save()
+    }
     dismiss()
   }
 }
